@@ -98,7 +98,7 @@ const styles = theme => ({
 class App extends Component {
   state = {
       pokemon: [],
-      limitPokemon: 'limit=150'
+      limitPokemon: 'limit=10'
   }
 
   componentDidMount() {

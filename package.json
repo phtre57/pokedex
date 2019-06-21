@@ -5,7 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+    "mdbreact": "^4.13.0",
     "react": "^16.8.6",
+    "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-scripts": "3.0.0"
@@ -32,6 +34,7 @@
     ]
   },
   "peerDependencies": {
+    "chart.js": "^2.8.0",
     "redux": "^4.0.1",
     "typescript": "^3.4.5"
   }

@@ -12,6 +12,9 @@ import red from '@material-ui/core/colors/red';
 
 import PokemonTypes from '../PokemonType/PokemonTypes';
 import PokemonAvatar from '../PokemonAvatar/PokemonAvatar';
+//import PokemonRadarChart from '../PokemonStatsChart/PokemonRadarChart'
+//import PokemonBaseStats from '../PokemonStatsChart/PokemonBaseStats'
+
 
 const styles = {
   card: {
@@ -43,6 +46,10 @@ const styles = {
   details: {
     display: 'flex',
     flexDirection: 'row',
+  },
+  pokeStats:{
+      display: 'flex',
+      flexDirection: 'column',
   },
   typeCardContent:{
       padding: '0px',
@@ -114,12 +121,14 @@ class pokemonCard extends Component{
                           image={this.state.isLoaded ? this.state.sprites.front_default : null}
                           src={this.state.isLoaded ? this.state.sprites.front_default : null}
                         />
-                    <CardContent className={classes.typeCardContent}>
-                            {this.state.isLoaded ?
-                                 this.state.types.map((type, index) => {
-                                     return <PokemonTypes key={type.type.url} type={type.type.name}/>
-                            }) : null }
-                        </CardContent>
+                    <div className={classes.pokeStats}>
+                            <CardContent className={classes.typeCardContent}>
+                                    {this.state.isLoaded ?
+                                         this.state.types.map((type, index) => {
+                                             return <PokemonTypes key={type.type.url} type={type.type.name}/>
+                                    }) : null }
+                            </CardContent>
+                        </div>
                     </div>
 
                     <CardContent>
